@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<title>
+			The Druidly Heroic Quantum Player Who Fails To Save The Day Yet Aagain!1
+		</title>
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+				background-color: #1A2123;
+			}
+
+			#wrapper {
+				display: inline-block;
+				position: relative;
+				width: 1250px;
+			}
+
+			#renderView {
+				margin: 10px;
+				border-style: solid;
+				border-width: 4px;
+				border-color: #0e191e;
+				width: 1011px;
+				height: 800px;
+				display: inline-block;
+			}
+
+			#resourceView {
+				display: inline-block;
+				color: #FFFFFF;
+				position: absolute;
+				left: 1035px;
+				top: 15px;
+			}
+		</style>
+		<script type="text/javascript">
+			// Some global scope stuff:
+			var messageQueue = [];
+		</script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="pixi.dev.js"></script>
+		<script type="text/javascript" src="/js/Rect.js"></script>
+		<script type="text/javascript" src="/js/DQHType.js"></script>
+		<script type="text/javascript" src="/js/DQHObject.js"></script>
+		<script type="text/javascript" src="main.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				var dqh = new DQH();
+				dqh.setUp();
+			});
+		</script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="renderView"></div>
+			<div id="resourceView">Books: 0</div>
+		</div>
+
+	</body>
+</html>
