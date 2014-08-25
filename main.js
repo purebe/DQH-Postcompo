@@ -665,6 +665,7 @@ function DQH() {
 	this.createFighter = function(x, y) {
 		var fighter = this.createObject("/imgs/fighter.png", DQHType.Fighter);
 		fighter.position(x, y);
+		fighter.life = 60;
 		return fighter;
 	}
 
