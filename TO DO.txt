@@ -1,0 +1,33 @@
+EVENT SYSTEM.
+
+BUILDINGS/RESEARCHES/ETC
+
+HP BARS FOR UNITS
+
+Zombies focus fighters, then druids, then books.
+
+pacing of game needs to be decided by and balanced by the way that the cost for researches and upgrades scales.
+
+RESARCHES:
+
+ROW 1 COL 3: BOOKS ARE STRONGER (each upgrade is +1 hit from a zombie, EXPENSIVE)
+
+ROW 2 COL 2: DRUID SPEED (druid velocity +0.5)
+
+ROW 3 COL 3: DRUID LIFE (+1 hit from a zombie, EXPENSIVE)
+
+ROW 3 COL 1: A HERO IS BORN (expensive, fighter spawn rate)
+
+ROW 3 COL 2: FIGHTER ENDURANCE (fighter velocity +0.1) (+life)
+
+ROW 3 COL 3: FIGHTER DAMAGE (+damage)
+
+EVENTS:
+
+Zombie Mania (mass zombie spawns)
+
+Zombie boss spawns
+
+Golden eggs spawn (worth lots of cash, but druids fear them so they won't collect them)
+
+when you upgrade spawn rates for druid/fighter, you also spawn 1x druid/fighter (maybe modulated by the research level)
