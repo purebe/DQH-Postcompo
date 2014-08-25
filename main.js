@@ -67,7 +67,7 @@ function DQH() {
 	}
 
 	this.loadContent = function() {
-		this.background = this.createObject("/imgs/worlds_background.png");
+		this.background = this.createObject("/DQH/imgs/worlds_background.png");
 		this.background.anchor(0, 0);
 		this.background.position(0, 0);
 	}
@@ -640,7 +640,7 @@ function DQH() {
 	}
 
 	this.createZombie = function(x, y) {
-		var zombie = this.createObject("/imgs/zombie.png", DQHType.Zombie);
+		var zombie = this.createObject("/DQH/imgs/zombie.png", DQHType.Zombie);
 		zombie.position(x, y);
 		zombie.setClickCallback(zombie.zombieCallback);
 		zombie.life = 10;
@@ -648,7 +648,7 @@ function DQH() {
 	}
 
 	this.createHolyBook = function(x, y) {
-		var holyBook = this.createObject("/imgs/book.png", DQHType.Book);
+		var holyBook = this.createObject("/DQH/imgs/book.png", DQHType.Book);
 		holyBook.position(x, y);
 		holyBook.setClickCallback(holyBook.holyBookCallback);
 		holyBook.scoreWorth = 5;
@@ -656,14 +656,14 @@ function DQH() {
 	}
 
 	this.createDruid = function(x, y) {
-		var druid = this.createObject("/imgs/druid.png", DQHType.Druid);
+		var druid = this.createObject("/DQH/imgs/druid.png", DQHType.Druid);
 		druid.position(x, y);
 		druid.addVelocity(this.druidSpeed);
 		return druid;
 	}
 
 	this.createFighter = function(x, y) {
-		var fighter = this.createObject("/imgs/fighter.png", DQHType.Fighter);
+		var fighter = this.createObject("/DQH/imgs/fighter.png", DQHType.Fighter);
 		fighter.position(x, y);
 		return fighter;
 	}
