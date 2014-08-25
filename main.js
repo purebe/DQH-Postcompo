@@ -790,7 +790,7 @@ function DQH() {
 						this.eventText = "There have been sightings of zombies.  Zombies are everywhere!  Zombies are eating druids and fighters, run for your lives, something about lions and bears, oh my!";	
 						this.pixiText1.setText(this.eventText);
 						this.pixiText2.setText(this.eventText);
-						var spawnCount += (this.eventCount+1) * 5;
+						var spawnCount = (this.eventCount+1) * 5;
 						for (var i = 0; i < spawnCount; ++i) {
 							messageQueue.push("spawnZombie");
 						}
