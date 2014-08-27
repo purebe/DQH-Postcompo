@@ -77,25 +77,25 @@ function DQHResearhView() {
 	this.loadContent = function() {
 		var that = this;
 
-		var currentTexture = PIXI.Texture.fromImage("/DQH/imgs/researchView.png");
+		var currentTexture = PIXI.Texture.fromImage("/DQH-Postcompo/imgs/researchView.png");
 		this.background = new PIXI.Sprite(currentTexture);
 		this.background.position.x = 0;
 		this.background.position.y = 0;
 		this.stage.addChild(this.background);
 
-		var whiteTexture = PIXI.Texture.fromImage("/DQH/imgs/white.png");
+		var whiteTexture = PIXI.Texture.fromImage("/DQH-Postcompo/imgs/white.png");
 		this.white = new PIXI.Sprite(whiteTexture);
 		this.white.position.x = -100;
 		this.white.position.y = -100;
 		this.white.alpha = 0.5;
 
-		var sliderTexture = PIXI.Texture.fromImage("/DQH/imgs/slider.png");
+		var sliderTexture = PIXI.Texture.fromImage("/DQH-Postcompo/imgs/slider.png");
 		this.slider = new PIXI.Sprite(sliderTexture);
 		this.slider.position.x = 20;
 		this.slider.position.y = 719;
 		this.stage.addChild(this.slider);
 
-		var treeTexture = PIXI.Texture.fromImage("/DQH/imgs/tree_research.png");
+		var treeTexture = PIXI.Texture.fromImage("/DQH-Postcompo/imgs/tree_research.png");
 		this.treeButton = new PIXI.Sprite(treeTexture);
 		this.treeButton.position.x = 42;
 		this.treeButton.position.y = 330;
@@ -143,7 +143,7 @@ function DQHResearhView() {
 			that.white.position.y = -100;
 		}
 
-		var typingTexture = PIXI.Texture.fromImage("/DQH/imgs/typing_research.png");
+		var typingTexture = PIXI.Texture.fromImage("/DQH-Postcompo/imgs/typing_research.png");
 		this.typingButton = new PIXI.Sprite(typingTexture);
 		this.typingButton.position.x = 188;
 		this.typingButton.position.y = 330;
@@ -195,7 +195,7 @@ function DQHResearhView() {
 			that.white.position.y = -100;
 		}
 
-		var druidTexture = PIXI.Texture.fromImage("/DQH/imgs/druid_button.png");
+		var druidTexture = PIXI.Texture.fromImage("/DQH-Postcompo/imgs/druid_button.png");
 		this.druidButton = new PIXI.Sprite(druidTexture);
 		this.druidButton.position.x = 42;
 		this.druidButton.position.y = 435;
@@ -248,7 +248,7 @@ function DQHResearhView() {
 			that.white.position.y = -100;
 		}
 
-		var fighterTexture = PIXI.Texture.fromImage("/DQH/imgs/fighter_button.png");
+		var fighterTexture = PIXI.Texture.fromImage("/DQH-Postcompo/imgs/fighter_button.png");
 		this.fighterButton = new PIXI.Sprite(fighterTexture);
 		this.fighterButton.position.x = 42;
 		this.fighterButton.position.y = 545;
@@ -301,7 +301,7 @@ function DQHResearhView() {
 			that.white.position.y = -100;
 		}
 
-		var druidSpeedTexture = PIXI.Texture.fromImage("/DQH/imgs/speed_druid_button.png");
+		var druidSpeedTexture = PIXI.Texture.fromImage("/DQH-Postcompo/imgs/speed_druid_button.png");
 		this.druidSpeedButton = new PIXI.Sprite(druidSpeedTexture);
 		this.druidSpeedButton.position.x = 188;
 		this.druidSpeedButton.position.y = 435;
@@ -354,7 +354,7 @@ function DQHResearhView() {
 			that.white.position.y = -100;
 		}
 
-		var fighterSpeedTexture = PIXI.Texture.fromImage("/DQH/imgs/fighterSpeedButton.png");
+		var fighterSpeedTexture = PIXI.Texture.fromImage("/DQH-Postcompo/imgs/fighterSpeedButton.png");
 		this.fighterSpeedButton = new PIXI.Sprite(fighterSpeedTexture);
 		this.fighterSpeedButton.position.x = 188;
 		this.fighterSpeedButton.position.y = 545;
