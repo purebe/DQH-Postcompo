@@ -331,7 +331,7 @@ function DQH() {
 				}
 
 				if (Intersects(this.druids[i].getPosition(), this.books[j].getPosition())) {
-					this.books[j].bonus = this.bookYield;
+					this.books[j].bonus = this.bookYield * 10;
 					messageQueue.push("kill " + this.books[j].getId());
 				}
 			}
@@ -391,7 +391,7 @@ function DQH() {
 					if (this.fighters[i].attackCooldown == 0) {
 						this.zombies[j].damage(10);
 						if (this.zombies[j].life <= 0) {
-							this.zombies[j].bonus = this.bookYield;
+							this.zombies[j].bonus = this.bookYield * 10;
 							break loop1;
 						}
 						this.fighters[i].animate("attack");
@@ -560,7 +560,7 @@ function DQH() {
 						}
 						else {
 							this.createSST("+5", sstPos, "red");
-							msgQR.push("addCash 5");
+							msgQR.push("addCash" + this.bookYield);
 						}
 						msgQR.push("addKill 1");
 						this.stage.removeChild(this.zombies[i].sprite);
