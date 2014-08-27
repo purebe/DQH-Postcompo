@@ -67,7 +67,7 @@ function DQH() {
 	}
 
 	this.loadContent = function() {
-		this.background = this.createObject("/imgs/worlds_background.png");
+		this.background = this.createObject("/DQH/imgs/worlds_background.png");
 		this.background.anchor(0, 0);
 		this.background.position(0, 0);
 	}
@@ -331,7 +331,7 @@ function DQH() {
 				}
 
 				if (Intersects(this.druids[i].getPosition(), this.books[j].getPosition())) {
-					this.books[j].bonus = this.bookYield;
+					this.books[j].bonus = this.bookYield * 10;
 					messageQueue.push("kill " + this.books[j].getId());
 				}
 			}
@@ -391,7 +391,7 @@ function DQH() {
 					if (this.fighters[i].attackCooldown == 0) {
 						this.zombies[j].damage(10);
 						if (this.zombies[j].life <= 0) {
-							this.zombies[j].bonus = this.bookYield;
+							this.zombies[j].bonus = this.bookYield * 10;
 							break loop1;
 						}
 						this.fighters[i].animate("attack");
@@ -559,8 +559,8 @@ function DQH() {
 							msgQR.push("addCash " + this.zombies[i].bonus.toString());
 						}
 						else {
-							this.createSST("+5", sstPos, "red");
-							msgQR.push("addCash 5");
+							this.createSST("+" + this.bookYield.toString(), sstPos, "red");
+							msgQR.push("addCash " + this.bookYield);
 						}
 						msgQR.push("addKill 1");
 						this.stage.removeChild(this.zombies[i].sprite);
@@ -640,7 +640,7 @@ function DQH() {
 	}
 
 	this.createZombie = function(x, y) {
-		var zombie = this.createObject("/imgs/zombie.png", DQHType.Zombie);
+		var zombie = this.createObject("/DQH/imgs/zombie.png", DQHType.Zombie);
 		zombie.position(x, y);
 		zombie.setClickCallback(zombie.zombieCallback);
 		zombie.life = 10;
@@ -648,7 +648,7 @@ function DQH() {
 	}
 
 	this.createHolyBook = function(x, y) {
-		var holyBook = this.createObject("/imgs/book.png", DQHType.Book);
+		var holyBook = this.createObject("/DQH/imgs/book.png", DQHType.Book);
 		holyBook.position(x, y);
 		holyBook.setClickCallback(holyBook.holyBookCallback);
 		holyBook.scoreWorth = 5;
@@ -656,16 +656,15 @@ function DQH() {
 	}
 
 	this.createDruid = function(x, y) {
-		var druid = this.createObject("/imgs/druid.png", DQHType.Druid);
+		var druid = this.createObject("/DQH/imgs/druid.png", DQHType.Druid);
 		druid.position(x, y);
 		druid.addVelocity(this.druidSpeed);
 		return druid;
 	}
 
 	this.createFighter = function(x, y) {
-		var fighter = this.createObject("/imgs/fighter.png", DQHType.Fighter);
+		var fighter = this.createObject("/DQH/imgs/fighter.png", DQHType.Fighter);
 		fighter.position(x, y);
-		fighter.life = 60;
 		return fighter;
 	}
 
@@ -751,10 +750,10 @@ function DQH() {
 			this.handleEvent();
 
 			this.pixiText1.position.x -= this.scrollSpeed;
-			this.pixiText2.position.x -= this.scrollSpeed;
+			//this.pixiText2.position.x -= this.scrollSpeed;
 
 			// Make it jump:
-			if (this.pixiText1.position.x + this.pixiText1.width <= 0) {
+			/*f (this.pixiText1.position.x + this.pixiText1.width <= 0) {
 				if (this.pixiText2.position.x + this.pixiText2.width > this.stage.width) {
 					this.pixiText1.position.x = this.pixiText2.position.x + this.pixiText2.width + this.spacer;
 				}
@@ -769,6 +768,11 @@ function DQH() {
 				else {
 					this.pixiText2.position.x = this.stage.width;
 				}
+			}*/
+
+			// Make it jump simple:
+			if (this.pixiText1.position.x + this.pixiText1.width <= 0) {
+				this.pixiText1.position.x = 1011;
 			}
 
 			if (this.canEvent) {
@@ -786,8 +790,7 @@ function DQH() {
 						this.eventText = "There have been sightings of zombies.  Zombies are everywhere!  Zombies are eating druids and fighters, run for your lives, something about lions and bears, oh my!";	
 						this.pixiText1.setText(this.eventText);
 						this.pixiText2.setText(this.eventText);
-						spawnCount += (this.eventCount+1) * 5;
-						spawnCount = Math.round(spawnCount);
+						var spawnCount = (this.eventCount+1) * 5;
 						for (var i = 0; i < spawnCount; ++i) {
 							messageQueue.push("spawnZombie");
 						}
@@ -958,7 +961,7 @@ function DQH() {
 			var results = evt.split(" ");
 			switch (results[0]) {
 				case "won":
-					this.eventText = "Holy shit you have killed 10,000 zombies.  You are the man!  You win the game!  Thanks for playing!  Ludum Dare #30!  john_conder9 !  Wooo!  You won!  Wooo!  That is awesome!  By the way, there are still zombies spawning and stuff!  You can keep playing if you want!  That's cool.  Thanks for playing.  I don't really care though.  I wish you hadn't played actually.  You kind of suck.  Yeah.  Take that player.  Take it.  Gangster sounds.  And signs.  Boom.  Congrats!";
+					this.eventText = "Holy shit you have killed 5,000 zombies.  You are the man!  You win the game!  Thanks for playing!  Ludum Dare #30!  john_conder9 !  Wooo!  You won!  Wooo!  That is awesome!  By the way, there are still zombies spawning and stuff!  You can keep playing if you want!  That's cool.  Thanks for playing.  I don't really care though.  I wish you hadn't played actually.  You kind of suck.  Yeah.  Take that player.  Take it.  Gangster sounds.  And signs.  Boom.  Congrats!";
 					this.pixiText1.setText(this.eventText);
 					this.pixiText2.setText(this.eventText);
 					this.eventMaxTicker = 3600;
