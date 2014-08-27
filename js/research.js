@@ -119,13 +119,13 @@ function DQHResearhView() {
 					case 3:
 					case 4:
 					case 5:
-						that.bookSpawnRateCost *= 2.2;
+						that.bookSpawnRateCost *= 2.1;
 					break;
 					case 6:
-						that.bookSpawnRateCost *= 2.4;
+						that.bookSpawnRateCost *= 2.2;
 					break;
 					default:
-						that.bookSpawnRateCost *= 3.0;
+						that.bookSpawnRateCost *= 2.3;
 					break;
 				}
 				that.bookSpawnRateCost = Math.floor(that.bookSpawnRateCost);
@@ -163,22 +163,22 @@ function DQHResearhView() {
 					case 1:
 						that.bookYieldRateCost *= 2.0;
 					case 2:
-						that.bookYieldRateCost *= 2.1;
+						that.bookYieldRateCost *= 2.0;
 					break;
 					case 3:
-						that.bookYieldRateCost *= 2.2;
+						that.bookYieldRateCost *= 2.0;
 					break;
 					case 4:
-						that.bookYieldRateCost *= 3.0;
+						that.bookYieldRateCost *= 2.1;
 					break;
 					case 5:
-						that.bookYieldRateCost *= 3.1;
+						that.bookYieldRateCost *= 2.2;
 					break;
 					case 6:
-						that.bookYieldRateCost *= 3.4;
+						that.bookYieldRateCost *= 2.3;
 					break;
 					default:
-						that.bookYieldRateCost *= 4;
+						that.bookYieldRateCost *= 2.4;
 					break;
 				}
 				that.bookYieldRateCost = Math.floor(that.bookYieldRateCost);
@@ -216,22 +216,22 @@ function DQHResearhView() {
 					case 1:
 						that.druidSpawnRateCost *= 2.5;
 					case 2:
-						that.druidSpawnRateCost *= 2.1;
-					break;
-					case 3:
-						that.druidSpawnRateCost *= 2.2;
-					break;
-					case 4:
 						that.druidSpawnRateCost *= 3.0;
 					break;
+					case 3:
+						that.druidSpawnRateCost *= 2.0;
+					break;
+					case 4:
+						that.druidSpawnRateCost *= 2.0;
+					break;
 					case 5:
-						that.druidSpawnRateCost *= 3.1;
+						that.druidSpawnRateCost *= 2.0;
 					break;
 					case 6:
-						that.druidSpawnRateCost *= 3.4;
+						that.druidSpawnRateCost *= 2.0;
 					break;
 					default:
-						that.druidSpawnRateCost *= 4;
+						that.druidSpawnRateCost *= 2.2;
 					break;
 				}
 				that.druidSpawnRateCost = Math.floor(that.druidSpawnRateCost);
@@ -267,24 +267,24 @@ function DQHResearhView() {
 				messageQueue.push("spawnFighter " + that.fighterSpawnLevel);
 				switch (that.fighterSpawnLevel) {
 					case 1:
-						that.fighterSpawnRateCost *= 2.5;
+						that.fighterSpawnRateCost *= 1.5;
 					case 2:
-						that.fighterSpawnRateCost *= 2.1;
+						that.fighterSpawnRateCost *= 1.6;
 					break;
 					case 3:
-						that.fighterSpawnRateCost *= 2.2;
+						that.fighterSpawnRateCost *= 1.7;
 					break;
 					case 4:
-						that.fighterSpawnRateCost *= 3.0;
+						that.fighterSpawnRateCost *= 1.8;
 					break;
 					case 5:
-						that.fighterSpawnRateCost *= 3.1;
+						that.fighterSpawnRateCost *= 1.9;
 					break;
 					case 6:
-						that.fighterSpawnRateCost *= 3.4;
+						that.fighterSpawnRateCost *= 2.0;
 					break;
 					default:
-						that.fighterSpawnRateCost *= 4;
+						that.fighterSpawnRateCost *= 2.1;
 					break;
 				}
 				that.fighterSpawnRateCost = Math.floor(that.fighterSpawnRateCost);
@@ -319,24 +319,24 @@ function DQHResearhView() {
 				that.updateScoreText();
 				switch (that.druidSpeedLevel) {
 					case 1:
-						that.druidSpeedCost *= 10;
+						that.druidSpeedCost *= 2.0;
 					case 2:
-						that.druidSpeedCost *= 15;
+						that.druidSpeedCost *= 3.0;
 					break;
 					case 3:
-						that.druidSpeedCost *= 20;
+						that.druidSpeedCost *= 4.0;
 					break;
 					case 4:
-						that.druidSpeedCost *= 25;
+						that.druidSpeedCost *= 5.0;
 					break;
 					case 5:
-						that.druidSpeedCost *= 30;
+						that.druidSpeedCost *= 6.0;
 					break;
 					case 6:
-						that.druidSpeedCost *= 40;
+						that.druidSpeedCost *= 7.0;
 					break;
 					default:
-						that.druidSpeedCost *= 100;
+						that.druidSpeedCost *= 8.0;
 					break;
 				}
 				that.druidSpeedCost = Math.floor(that.druidSpeedCost);
@@ -371,24 +371,24 @@ function DQHResearhView() {
 				that.updateScoreText();
 				switch (that.fighterSpeedLevel) {
 					case 1:
-						that.fighterSpeedCost *= 10;
+						that.fighterSpeedCost *= 2.0;
 					case 2:
-						that.fighterSpeedCost *= 15;
+						that.fighterSpeedCost *= 3.0;
 					break;
 					case 3:
-						that.fighterSpeedCost *= 20;
+						that.fighterSpeedCost *= 4.0;
 					break;
 					case 4:
-						that.fighterSpeedCost *= 25;
+						that.fighterSpeedCost *= 5.0;
 					break;
 					case 5:
-						that.fighterSpeedCost *= 30;
+						that.fighterSpeedCost *= 6.0;
 					break;
 					case 6:
-						that.fighterSpeedCost *= 40;
+						that.fighterSpeedCost *= 7.0;
 					break;
 					default:
-						that.fighterSpeedCost *= 100;
+						that.fighterSpeedCost *= 8.0;
 					break;
 				}
 				that.fighterSpeedCost = Math.floor(that.fighterSpeedCost);
