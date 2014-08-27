@@ -1,5 +1,5 @@
 function DQHResearhView() {
-	this.stage = new PIXI.Stage(0x000000, true);
+	//this.stage = new PIXI.Stage(0x000000, true);
 	this.renderer = new PIXI.autoDetectRenderer(500, 800);
 	this.background = null;
 	this.clickables = [];
@@ -77,25 +77,25 @@ function DQHResearhView() {
 	this.loadContent = function() {
 		var that = this;
 
-		var currentTexture = PIXI.Texture.fromImage("/imgs/researchView.png");
+		var currentTexture = PIXI.Texture.fromImage("/DQH/imgs/researchView.png");
 		this.background = new PIXI.Sprite(currentTexture);
 		this.background.position.x = 0;
 		this.background.position.y = 0;
 		this.stage.addChild(this.background);
 
-		var whiteTexture = PIXI.Texture.fromImage("/imgs/white.png");
+		var whiteTexture = PIXI.Texture.fromImage("/DQH/imgs/white.png");
 		this.white = new PIXI.Sprite(whiteTexture);
 		this.white.position.x = -100;
 		this.white.position.y = -100;
 		this.white.alpha = 0.5;
 
-		var sliderTexture = PIXI.Texture.fromImage("/imgs/slider.png");
+		var sliderTexture = PIXI.Texture.fromImage("/DQH/imgs/slider.png");
 		this.slider = new PIXI.Sprite(sliderTexture);
 		this.slider.position.x = 20;
 		this.slider.position.y = 719;
 		this.stage.addChild(this.slider);
 
-		var treeTexture = PIXI.Texture.fromImage("/imgs/tree_research.png");
+		var treeTexture = PIXI.Texture.fromImage("/DQH/imgs/tree_research.png");
 		this.treeButton = new PIXI.Sprite(treeTexture);
 		this.treeButton.position.x = 42;
 		this.treeButton.position.y = 330;
@@ -119,13 +119,13 @@ function DQHResearhView() {
 					case 3:
 					case 4:
 					case 5:
-						that.bookSpawnRateCost *= 2.2;
+						that.bookSpawnRateCost *= 2.1;
 					break;
 					case 6:
-						that.bookSpawnRateCost *= 2.4;
+						that.bookSpawnRateCost *= 2.2;
 					break;
 					default:
-						that.bookSpawnRateCost *= 3.0;
+						that.bookSpawnRateCost *= 2.3;
 					break;
 				}
 				that.bookSpawnRateCost = Math.floor(that.bookSpawnRateCost);
@@ -143,7 +143,7 @@ function DQHResearhView() {
 			that.white.position.y = -100;
 		}
 
-		var typingTexture = PIXI.Texture.fromImage("/imgs/typing_research.png");
+		var typingTexture = PIXI.Texture.fromImage("/DQH/imgs/typing_research.png");
 		this.typingButton = new PIXI.Sprite(typingTexture);
 		this.typingButton.position.x = 188;
 		this.typingButton.position.y = 330;
@@ -163,22 +163,22 @@ function DQHResearhView() {
 					case 1:
 						that.bookYieldRateCost *= 2.0;
 					case 2:
-						that.bookYieldRateCost *= 2.1;
+						that.bookYieldRateCost *= 2.0;
 					break;
 					case 3:
-						that.bookYieldRateCost *= 2.2;
+						that.bookYieldRateCost *= 2.0;
 					break;
 					case 4:
-						that.bookYieldRateCost *= 3.0;
+						that.bookYieldRateCost *= 2.1;
 					break;
 					case 5:
-						that.bookYieldRateCost *= 3.1;
+						that.bookYieldRateCost *= 2.2;
 					break;
 					case 6:
-						that.bookYieldRateCost *= 3.4;
+						that.bookYieldRateCost *= 2.3;
 					break;
 					default:
-						that.bookYieldRateCost *= 4;
+						that.bookYieldRateCost *= 2.4;
 					break;
 				}
 				that.bookYieldRateCost = Math.floor(that.bookYieldRateCost);
@@ -195,7 +195,7 @@ function DQHResearhView() {
 			that.white.position.y = -100;
 		}
 
-		var druidTexture = PIXI.Texture.fromImage("/imgs/druid_button.png");
+		var druidTexture = PIXI.Texture.fromImage("/DQH/imgs/druid_button.png");
 		this.druidButton = new PIXI.Sprite(druidTexture);
 		this.druidButton.position.x = 42;
 		this.druidButton.position.y = 435;
@@ -216,22 +216,22 @@ function DQHResearhView() {
 					case 1:
 						that.druidSpawnRateCost *= 2.5;
 					case 2:
-						that.druidSpawnRateCost *= 2.1;
-					break;
-					case 3:
-						that.druidSpawnRateCost *= 2.2;
-					break;
-					case 4:
 						that.druidSpawnRateCost *= 3.0;
 					break;
+					case 3:
+						that.druidSpawnRateCost *= 2.0;
+					break;
+					case 4:
+						that.druidSpawnRateCost *= 2.0;
+					break;
 					case 5:
-						that.druidSpawnRateCost *= 3.1;
+						that.druidSpawnRateCost *= 2.0;
 					break;
 					case 6:
-						that.druidSpawnRateCost *= 3.4;
+						that.druidSpawnRateCost *= 2.0;
 					break;
 					default:
-						that.druidSpawnRateCost *= 4;
+						that.druidSpawnRateCost *= 2.2;
 					break;
 				}
 				that.druidSpawnRateCost = Math.floor(that.druidSpawnRateCost);
@@ -248,7 +248,7 @@ function DQHResearhView() {
 			that.white.position.y = -100;
 		}
 
-		var fighterTexture = PIXI.Texture.fromImage("/imgs/fighter_button.png");
+		var fighterTexture = PIXI.Texture.fromImage("/DQH/imgs/fighter_button.png");
 		this.fighterButton = new PIXI.Sprite(fighterTexture);
 		this.fighterButton.position.x = 42;
 		this.fighterButton.position.y = 545;
@@ -267,24 +267,24 @@ function DQHResearhView() {
 				messageQueue.push("spawnFighter " + that.fighterSpawnLevel);
 				switch (that.fighterSpawnLevel) {
 					case 1:
-						that.fighterSpawnRateCost *= 2.5;
+						that.fighterSpawnRateCost *= 1.5;
 					case 2:
-						that.fighterSpawnRateCost *= 2.1;
+						that.fighterSpawnRateCost *= 1.6;
 					break;
 					case 3:
-						that.fighterSpawnRateCost *= 2.2;
+						that.fighterSpawnRateCost *= 1.7;
 					break;
 					case 4:
-						that.fighterSpawnRateCost *= 3.0;
+						that.fighterSpawnRateCost *= 1.8;
 					break;
 					case 5:
-						that.fighterSpawnRateCost *= 3.1;
+						that.fighterSpawnRateCost *= 1.9;
 					break;
 					case 6:
-						that.fighterSpawnRateCost *= 3.4;
+						that.fighterSpawnRateCost *= 2.0;
 					break;
 					default:
-						that.fighterSpawnRateCost *= 4;
+						that.fighterSpawnRateCost *= 2.1;
 					break;
 				}
 				that.fighterSpawnRateCost = Math.floor(that.fighterSpawnRateCost);
@@ -301,7 +301,7 @@ function DQHResearhView() {
 			that.white.position.y = -100;
 		}
 
-		var druidSpeedTexture = PIXI.Texture.fromImage("/imgs/speed_druid_button.png");
+		var druidSpeedTexture = PIXI.Texture.fromImage("/DQH/imgs/speed_druid_button.png");
 		this.druidSpeedButton = new PIXI.Sprite(druidSpeedTexture);
 		this.druidSpeedButton.position.x = 188;
 		this.druidSpeedButton.position.y = 435;
@@ -319,24 +319,25 @@ function DQHResearhView() {
 				that.updateScoreText();
 				switch (that.druidSpeedLevel) {
 					case 1:
-						that.druidSpeedCost *= 10;
+						that.druidSpeedCost *= 2.0;
+					break;
 					case 2:
-						that.druidSpeedCost *= 15;
+						that.druidSpeedCost *= 3.0;
 					break;
 					case 3:
-						that.druidSpeedCost *= 20;
+						that.druidSpeedCost *= 4.0;
 					break;
 					case 4:
-						that.druidSpeedCost *= 25;
+						that.druidSpeedCost *= 5.0;
 					break;
 					case 5:
-						that.druidSpeedCost *= 30;
+						that.druidSpeedCost *= 6.0;
 					break;
 					case 6:
-						that.druidSpeedCost *= 40;
+						that.druidSpeedCost *= 7.0;
 					break;
 					default:
-						that.druidSpeedCost *= 100;
+						that.druidSpeedCost *= 8.0;
 					break;
 				}
 				that.druidSpeedCost = Math.floor(that.druidSpeedCost);
@@ -353,7 +354,7 @@ function DQHResearhView() {
 			that.white.position.y = -100;
 		}
 
-		var fighterSpeedTexture = PIXI.Texture.fromImage("/imgs/fighterSpeedButton.png");
+		var fighterSpeedTexture = PIXI.Texture.fromImage("/DQH/imgs/fighterSpeedButton.png");
 		this.fighterSpeedButton = new PIXI.Sprite(fighterSpeedTexture);
 		this.fighterSpeedButton.position.x = 188;
 		this.fighterSpeedButton.position.y = 545;
@@ -371,24 +372,25 @@ function DQHResearhView() {
 				that.updateScoreText();
 				switch (that.fighterSpeedLevel) {
 					case 1:
-						that.fighterSpeedCost *= 10;
+						that.fighterSpeedCost *= 2.0;
+					break;
 					case 2:
-						that.fighterSpeedCost *= 15;
+						that.fighterSpeedCost *= 3.0;
 					break;
 					case 3:
-						that.fighterSpeedCost *= 20;
+						that.fighterSpeedCost *= 4.0;
 					break;
 					case 4:
-						that.fighterSpeedCost *= 25;
+						that.fighterSpeedCost *= 5.0;
 					break;
 					case 5:
-						that.fighterSpeedCost *= 30;
+						that.fighterSpeedCost *= 6.0;
 					break;
 					case 6:
-						that.fighterSpeedCost *= 40;
+						that.fighterSpeedCost *= 7.0;
 					break;
 					default:
-						that.fighterSpeedCost *= 100;
+						that.fighterSpeedCost *= 8.0;
 					break;
 				}
 				that.fighterSpeedCost = Math.floor(that.fighterSpeedCost);
