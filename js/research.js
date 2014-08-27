@@ -1,5 +1,5 @@
 function DQHResearhView() {
-	this.stage = new PIXI.Stage(0x000000, true);
+	//this.stage = new PIXI.Stage(0x000000, true);
 	this.renderer = new PIXI.autoDetectRenderer(500, 800);
 	this.background = null;
 	this.clickables = [];
