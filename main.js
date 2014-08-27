@@ -559,7 +559,7 @@ function DQH() {
 							msgQR.push("addCash " + this.zombies[i].bonus.toString());
 						}
 						else {
-							this.createSST("+5", sstPos, "red");
+							this.createSST("+" + this.bookYield.toString(), sstPos, "red");
 							msgQR.push("addCash " + this.bookYield);
 						}
 						msgQR.push("addKill 1");
