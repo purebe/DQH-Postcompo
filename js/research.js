@@ -320,6 +320,7 @@ function DQHResearhView() {
 				switch (that.druidSpeedLevel) {
 					case 1:
 						that.druidSpeedCost *= 2.0;
+					break;
 					case 2:
 						that.druidSpeedCost *= 3.0;
 					break;
@@ -372,6 +373,7 @@ function DQHResearhView() {
 				switch (that.fighterSpeedLevel) {
 					case 1:
 						that.fighterSpeedCost *= 2.0;
+					break;
 					case 2:
 						that.fighterSpeedCost *= 3.0;
 					break;
