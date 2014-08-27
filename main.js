@@ -560,7 +560,7 @@ function DQH() {
 						}
 						else {
 							this.createSST("+5", sstPos, "red");
-							msgQR.push("addCash" + this.bookYield);
+							msgQR.push("addCash " + this.bookYield);
 						}
 						msgQR.push("addKill 1");
 						this.stage.removeChild(this.zombies[i].sprite);
