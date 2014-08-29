@@ -313,7 +313,6 @@ function DQHResearhView() {
 		this.druidSpeedButtonText.position.y = this.druidSpeedButton.position.y + 64;
 		this.stage.addChild(this.druidSpeedButtonText);
 		this.druidSpeedButton.click = function(data) {
-			console.log("wtf");
 			if (that.druidSpeedCost <= that.score) {
 				that.druidSpeedLevel += 1;
 				that.score -= that.druidSpeedCost;
